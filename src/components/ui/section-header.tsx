@@ -9,6 +9,7 @@ type SectionHeaderProps = {
   title: string;
   action?: React.ReactNode;
   className?: string;
+  tone?: "light" | "dark";
 };
 
 export function SectionHeader({
@@ -16,7 +17,12 @@ export function SectionHeader({
   title,
   action,
   className,
+  tone = "light",
 }: SectionHeaderProps) {
+  const eyebrowCls =
+    tone === "dark" ? "text-white/40" : "text-[var(--color-muted-soft)]";
+  const titleCls = tone === "dark" ? "text-white" : "text-foreground";
+
   return (
     <div
       className={cn(
@@ -31,11 +37,21 @@ export function SectionHeader({
         transition={{ duration: 0.5, ease: EASE_OUT }}
       >
         {eyebrow ? (
-          <p className="text-[10px] font-medium text-[var(--color-muted-soft)] uppercase tracking-[0.25em] mb-2">
+          <p
+            className={cn(
+              "text-[10px] font-medium uppercase tracking-[0.25em] mb-2",
+              eyebrowCls
+            )}
+          >
             {eyebrow}
           </p>
         ) : null}
-        <h2 className="text-lg md:text-xl font-medium tracking-tight uppercase text-foreground">
+        <h2
+          className={cn(
+            "text-lg md:text-xl font-medium tracking-tight uppercase",
+            titleCls
+          )}
+        >
           {title}
         </h2>
       </motion.div>
