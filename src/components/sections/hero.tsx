@@ -59,15 +59,15 @@ export function Hero() {
           Disponible pour vos shows 2026
         </motion.div>
 
-        <h1 className="flex items-center justify-center gap-4 md:gap-8 mb-6 text-balance">
+        <h1 className="flex items-center justify-center gap-3 md:gap-5 mb-4 text-balance">
           {words.map((word, i) => (
-            <span key={word} className="flex items-center gap-4 md:gap-8">
+            <span key={word} className="flex items-center gap-3 md:gap-5">
               <motion.span
                 variants={wordVariants}
                 initial="hidden"
                 animate="show"
                 custom={i}
-                className="text-5xl md:text-7xl lg:text-[7.5rem] font-medium tracking-tight text-white uppercase leading-none"
+                className="text-2xl md:text-3xl lg:text-4xl font-medium tracking-[0.05em] text-white uppercase leading-none"
               >
                 {word}
               </motion.span>
@@ -80,7 +80,7 @@ export function Hero() {
                     delay: 0.4 + i * 0.1,
                     ease: EASE_OUT,
                   }}
-                  className="h-2.5 w-2.5 md:h-3 md:w-3 bg-[var(--color-accent)] shadow-[0_0_20px_rgba(220,38,38,0.6)]"
+                  className="h-1.5 w-1.5 md:h-2 md:w-2 bg-[var(--color-accent)] shadow-[0_0_14px_rgba(220,38,38,0.6)]"
                   aria-hidden
                 />
               ) : null}
@@ -92,7 +92,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="text-xs md:text-sm font-medium text-white/70 tracking-[0.4em] uppercase mt-2"
+          className="text-[10px] md:text-xs font-medium text-white/70 tracking-[0.35em] uppercase mt-1"
         >
           {SITE.tagline.split(" · ").map((piece: string, i: number, arr: string[]) => (
             <span key={piece}>
