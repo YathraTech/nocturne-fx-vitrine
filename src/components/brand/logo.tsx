@@ -17,11 +17,11 @@ export function Logo({ className }: LogoProps) {
       <Image
         src="/images/logo-nokturne.png"
         alt={`${SITE.name} — logo`}
-        width={900}
-        height={380}
+        width={928}
+        height={277}
         priority
-        sizes="(min-width: 1024px) 240px, 200px"
-        className="h-12 md:h-14 lg:h-16 w-auto object-contain drop-shadow-[0_0_14px_rgba(0,255,0,0.25)]"
+        sizes="(min-width: 1024px) 260px, 220px"
+        className="h-14 md:h-16 lg:h-[68px] w-auto object-contain drop-shadow-[0_0_18px_rgba(0,255,0,0.28)]"
       />
     </span>
   );
