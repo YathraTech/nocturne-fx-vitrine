@@ -43,9 +43,9 @@ export function Hero() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.55)_70%)]" />
       </div>
 
-      <div className="absolute -bottom-1 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-black z-[1]" />
+      <div className="absolute -bottom-1 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-black z-[1]" />
 
-      <div className="relative z-10 flex-grow flex flex-col items-center justify-center px-4 text-center pt-28 pb-24">
+      <div className="relative z-10 flex-grow flex flex-col items-center justify-end px-4 text-center pt-28 pb-20 md:pb-24 lg:pb-28">
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
@@ -103,36 +103,26 @@ export function Hero() {
             </span>
           ))}
         </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1 }}
-          className="mt-16 flex flex-col items-center gap-3 text-white/50"
-        >
-          <a
-            href="#effets"
-            aria-label="Voir nos effets spéciaux"
-            className="group flex flex-col items-center gap-3 hover:text-white transition-colors"
-          >
-            <span className="text-[10px] uppercase tracking-[0.3em]">
-              Découvrir
-            </span>
-            <motion.span
-              animate={{ y: [0, 6, 0] }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              aria-hidden
-              className="rounded-full border border-current p-2"
-            >
-              <ArrowDown className="h-3.5 w-3.5" />
-            </motion.span>
-          </a>
-        </motion.div>
       </div>
+
+      <motion.a
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 1 }}
+        href="#effets"
+        aria-label="Voir nos effets spéciaux"
+        className="hidden md:flex absolute bottom-8 right-8 z-20 items-center gap-3 text-white/50 hover:text-white transition-colors"
+      >
+        <span className="text-[10px] uppercase tracking-[0.3em]">Découvrir</span>
+        <motion.span
+          animate={{ y: [0, 6, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          aria-hidden
+          className="rounded-full border border-current p-2"
+        >
+          <ArrowDown className="h-3.5 w-3.5" />
+        </motion.span>
+      </motion.a>
     </section>
   );
 }
