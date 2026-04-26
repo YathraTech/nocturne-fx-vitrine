@@ -11,19 +11,17 @@ type LogoProps = {
 export function Logo({ className }: LogoProps) {
   return (
     <span
-      className={cn(
-        "relative block h-10 md:h-12 w-[170px] md:w-[200px] overflow-hidden select-none",
-        className
-      )}
+      className={cn("inline-flex items-center select-none", className)}
       aria-label={SITE.name}
     >
       <Image
         src="/images/logo-nokturne.png"
         alt={`${SITE.name} — logo`}
-        fill
+        width={900}
+        height={380}
         priority
-        sizes="220px"
-        className="object-contain scale-[2.6] origin-center drop-shadow-[0_0_14px_rgba(0,255,0,0.25)]"
+        sizes="(min-width: 1024px) 240px, 200px"
+        className="h-12 md:h-14 lg:h-16 w-auto object-contain drop-shadow-[0_0_14px_rgba(0,255,0,0.25)]"
       />
     </span>
   );
