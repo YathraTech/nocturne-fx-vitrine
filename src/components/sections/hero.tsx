@@ -80,7 +80,7 @@ export function Hero() {
                     delay: 0.4 + i * 0.1,
                     ease: EASE_OUT,
                   }}
-                  className="h-1.5 w-1.5 md:h-2 md:w-2 bg-[var(--color-accent)] shadow-[0_0_14px_rgba(220,38,38,0.6)]"
+                  className="h-1.5 w-1.5 md:h-2 md:w-2 bg-[var(--color-accent)] shadow-[0_0_14px_rgba(0,255,0,0.55)]"
                   aria-hidden
                 />
               ) : null}

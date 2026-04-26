@@ -10,8 +10,8 @@
   --color-border-soft: #e5e7eb;
   --color-surface: #f7f7f8;
   --color-ink: #111111;
-  --color-accent: #dc2626;
-  --color-accent-hover: #b91c1c;
+  --color-accent: #00ff00;
+  --color-accent-hover: #00d400;
 }
 
 @layer base {
