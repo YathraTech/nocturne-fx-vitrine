@@ -14,8 +14,7 @@ export const SITE = {
   tagline: "Prestation · Location · Conception",
   hero: {
     keywords: ["FX", "Live", "Pyro"] as const,
-    backgroundImage:
-      "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg",
+    backgroundImage: "/images/hero-bg.png",
     backgroundAlt: "Scène de concert avec effets pyrotechniques",
   },
   description:
