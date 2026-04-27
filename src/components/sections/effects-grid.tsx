@@ -10,7 +10,7 @@ export function EffectsGrid() {
       className="relative w-full bg-white"
       aria-labelledby="effects-heading"
     >
-      <Container className="py-20 md:py-28">
+      <Container className="max-w-[1680px] px-4 md:px-6 py-20 md:py-28">
         <SectionHeader title="Catalogue" />
         <div
           id="effects-heading"

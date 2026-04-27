@@ -45,7 +45,7 @@ export function Products() {
       className="relative w-full bg-white"
       aria-labelledby="products-heading"
     >
-      <Container className="py-12 md:py-24">
+      <Container className="max-w-[1680px] px-4 md:px-6 py-12 md:py-24">
         <SectionHeader
           eyebrow="Catalogue"
           title="Nos meilleures références"
