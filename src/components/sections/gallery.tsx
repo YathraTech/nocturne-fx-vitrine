@@ -4,6 +4,7 @@ import * as React from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 import { Container } from "@/components/ui/container";
+import { Lightbox } from "@/components/ui/lightbox";
 import { GALLERY_FILTERS, GALLERY_ITEMS } from "@/lib/data";
 import { EASE_OUT } from "@/lib/motion";
 import type { GalleryCategory, GalleryItem } from "@/lib/types";
@@ -19,10 +20,16 @@ const ASPECT_CLASS: Record<NonNullable<GalleryItem["aspect"]>, string> = {
 
 export function Gallery() {
   const [filter, setFilter] = React.useState<GalleryCategory | "all">("all");
+  const [openIndex, setOpenIndex] = React.useState<number | null>(null);
 
   const items = React.useMemo(() => {
     if (filter === "all") return GALLERY_ITEMS;
     return GALLERY_ITEMS.filter((it) => it.categories.includes(filter));
+  }, [filter]);
+
+  // Reset the open lightbox when filtering reduces the visible set.
+  React.useEffect(() => {
+    setOpenIndex(null);
   }, [filter]);
 
   return (
@@ -79,8 +86,11 @@ export function Gallery() {
         >
           <AnimatePresence mode="popLayout">
             {items.map((item, i) => (
-              <motion.figure
+              <motion.button
                 key={item.id}
+                type="button"
+                onClick={() => setOpenIndex(i)}
+                aria-label={`Agrandir : ${item.alt}`}
                 layout
                 initial={{ opacity: 0, y: 16, scale: 0.98 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -91,7 +101,8 @@ export function Gallery() {
                   ease: EASE_OUT,
                 }}
                 className={cn(
-                  "group relative overflow-hidden rounded-xl bg-neutral-100",
+                  "group relative overflow-hidden rounded-xl bg-neutral-100 cursor-zoom-in",
+                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2",
                   ASPECT_CLASS[item.aspect ?? "4/5"]
                 )}
               >
@@ -104,14 +115,14 @@ export function Gallery() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
                 {item.event ? (
-                  <figcaption className="absolute inset-x-0 bottom-0 p-4 md:p-5 flex flex-col gap-1 text-white opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
+                  <div className="absolute inset-x-0 bottom-0 p-4 md:p-5 flex flex-col items-start gap-1 text-white text-left opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
                     <span className="text-[10px] uppercase tracking-[0.25em] text-white/70">
                       {item.year ?? "—"}
                     </span>
                     <span className="text-sm font-medium">{item.event}</span>
-                  </figcaption>
+                  </div>
                 ) : null}
-              </motion.figure>
+              </motion.button>
             ))}
           </AnimatePresence>
         </motion.div>
@@ -122,6 +133,13 @@ export function Gallery() {
           </div>
         ) : null}
       </Container>
+
+      <Lightbox
+        items={items}
+        index={openIndex}
+        onClose={() => setOpenIndex(null)}
+        onIndexChange={setOpenIndex}
+      />
     </section>
   );
 }
