@@ -58,4 +58,30 @@ export type FooterColumn = {
   links: NavLink[];
 };
 
+export type GalleryCategory =
+  | "flamme"
+  | "confettis"
+  | "co2"
+  | "fumee"
+  | "etincelles";
+
+export type GalleryItem = {
+  id: string;
+  src: string;
+  alt: string;
+  /** Image categories — used by the filter chips on /galerie */
+  categories: GalleryCategory[];
+  /** Optional event/show name for the caption overlay */
+  event?: string;
+  /** Optional year for the caption overlay */
+  year?: number;
+  /** Image aspect ratio used for the masonry layout (e.g. "4/5", "16/9") */
+  aspect?: "4/5" | "1/1" | "3/4" | "16/9" | "4/3";
+};
+
+export type GalleryFilter = {
+  key: GalleryCategory | "all";
+  label: string;
+};
+
 export type IconComponent = LucideIcon;
