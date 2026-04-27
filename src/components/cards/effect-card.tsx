@@ -38,11 +38,11 @@ export function EffectCard({ effect, index }: EffectCardProps) {
 
       <div className="absolute inset-0 p-5 md:p-6 flex flex-col justify-end">
         <div className="flex items-end justify-between gap-4">
-          <div>
-            <span className="block text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase text-white leading-[0.95] drop-shadow-[0_2px_18px_rgba(0,0,0,0.55)]">
+          <div className="flex flex-col items-start gap-2">
+            <span className="inline-flex items-center bg-black/55 backdrop-blur-md border border-white/15 rounded-md px-4 py-2.5 md:px-5 md:py-3 text-sm md:text-base font-semibold tracking-[0.12em] uppercase text-white shadow-[0_4px_18px_-4px_rgba(0,0,0,0.5)]">
               {effect.name}
             </span>
-            <span className="block text-[11px] md:text-xs text-white/70 mt-1 max-w-[24ch] line-clamp-2 opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-500">
+            <span className="block text-[11px] md:text-xs text-white/80 max-w-[24ch] line-clamp-2 opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-500">
               {effect.description}
             </span>
           </div>
