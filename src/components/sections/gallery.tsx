@@ -10,8 +10,9 @@ import { EASE_OUT } from "@/lib/motion";
 import type { GalleryCategory } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
-// Uniform aspect ratio across the entire gallery grid for visual consistency.
-const TILE_ASPECT = "aspect-[4/5]";
+// Uniform square tiles across the gallery — the lightbox restores the
+// image's native aspect ratio when a tile is opened.
+const TILE_ASPECT = "aspect-square";
 
 export function Gallery() {
   const [filter, setFilter] = React.useState<GalleryCategory | "all">("all");
@@ -29,7 +30,7 @@ export function Gallery() {
 
   return (
     <section className="relative w-full bg-white pt-24 md:pt-28 pb-20 md:pb-28">
-      <Container>
+      <Container className="max-w-[88rem] px-4 md:px-8">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
