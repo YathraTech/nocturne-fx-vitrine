@@ -7,16 +7,11 @@ import { Container } from "@/components/ui/container";
 import { Lightbox } from "@/components/ui/lightbox";
 import { GALLERY_FILTERS, GALLERY_ITEMS } from "@/lib/data";
 import { EASE_OUT } from "@/lib/motion";
-import type { GalleryCategory, GalleryItem } from "@/lib/types";
+import type { GalleryCategory } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
-const ASPECT_CLASS: Record<NonNullable<GalleryItem["aspect"]>, string> = {
-  "4/5": "aspect-[4/5]",
-  "1/1": "aspect-square",
-  "3/4": "aspect-[3/4]",
-  "16/9": "aspect-[16/9]",
-  "4/3": "aspect-[4/3]",
-};
+// Uniform aspect ratio across the entire gallery grid for visual consistency.
+const TILE_ASPECT = "aspect-[4/5]";
 
 export function Gallery() {
   const [filter, setFilter] = React.useState<GalleryCategory | "all">("all");
@@ -103,7 +98,7 @@ export function Gallery() {
                 className={cn(
                   "group relative overflow-hidden rounded-xl bg-neutral-100 cursor-zoom-in",
                   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2",
-                  ASPECT_CLASS[item.aspect ?? "4/5"]
+                  TILE_ASPECT
                 )}
               >
                 <Image
