@@ -23,7 +23,7 @@ export function EffectCard({ effect, index }: EffectCardProps) {
         delay: (index % 3) * 0.08,
         ease: EASE_OUT,
       }}
-      className="group relative block overflow-hidden rounded-xl aspect-[16/10] bg-neutral-100 focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:outline-none"
+      className="group relative block overflow-hidden rounded-xl aspect-[2/1] bg-neutral-100 focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:outline-none"
       aria-label={`Effet ${effect.name}`}
     >
       <Image
