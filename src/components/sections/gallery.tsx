@@ -30,7 +30,7 @@ export function Gallery() {
 
   return (
     <section className="relative w-full bg-white pt-24 md:pt-28 pb-20 md:pb-28">
-      <Container className="max-w-[88rem] px-4 md:px-8">
+      <Container className="max-w-[1680px] px-4 md:px-6">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ export function Gallery() {
 
         <motion.div
           layout
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3"
         >
           <AnimatePresence mode="popLayout">
             {items.map((item, i) => (
