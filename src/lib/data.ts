@@ -26,7 +26,7 @@ export const SITE = {
 
 export const NAVIGATION: NavLink[] = [
   { label: "Accueil", href: "#hero" },
-  { label: "Effets spéciaux", href: "#effets" },
+  { label: "Catalogue", href: "#effets" },
   { label: "Références", href: "#references" },
   { label: "À propos", href: "#about" },
   { label: "Devis", href: "#contact" },
