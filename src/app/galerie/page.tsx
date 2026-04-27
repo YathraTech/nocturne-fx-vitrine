@@ -9,11 +9,11 @@ import { GALLERY_HERO } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Galerie",
   description:
-    "Galerie d'événements réalisés par Nokturne FX — concerts, festivals, soirées et galas. Flammes, confettis, CO2, fumée, étincelles.",
+    "Galerie d'événements réalisés par Nokturne — concerts, festivals, soirées et galas. Flammes, confettis, CO2, fumée, étincelles.",
   openGraph: {
-    title: "Galerie · Nokturne FX",
+    title: "Galerie · Nokturne",
     description:
-      "Galerie d'événements réalisés par Nokturne FX — concerts, festivals, soirées et galas.",
+      "Galerie d'événements réalisés par Nokturne — concerts, festivals, soirées et galas.",
   },
 };
 
@@ -53,7 +53,7 @@ export default function GaleriePage() {
             </h1>
             <p className="mt-4 max-w-xl text-sm md:text-base text-white/70 leading-relaxed">
               Une sélection d&apos;événements live, festivals, galas et soirées
-              privées sur lesquels Nokturne FX a opéré flammes, confettis, CO2,
+              privées sur lesquels Nokturne a opéré flammes, confettis, CO2,
               fumée et étincelles.
             </p>
           </Container>

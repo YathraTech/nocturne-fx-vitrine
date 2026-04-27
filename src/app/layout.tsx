@@ -12,11 +12,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://nocturne-fx.vercel.app"),
   title: {
-    default: "Nocturne — Effets spéciaux pour scènes & événements",
-    template: "%s · Nocturne FX",
+    default: "Nokturne — Effets spéciaux pour scènes & événements",
+    template: "%s · Nokturne",
   },
   description:
-    "Nocturne FX : prestation, location et conception d'effets spéciaux scéniques. Flammes, CO2, étincelles, confettis, fumée, neige — pour concerts, festivals et événements.",
+    "Nokturne : prestation, location et conception d'effets spéciaux scéniques. Flammes, CO2, étincelles, confettis, fumée, neige — pour concerts, festivals et événements.",
   keywords: [
     "effets spéciaux",
     "SFX scénique",
@@ -29,20 +29,20 @@ export const metadata: Metadata = {
     "étincelles",
     "flammes",
   ],
-  authors: [{ name: "Nocturne FX" }],
-  creator: "Nocturne FX",
+  authors: [{ name: "Nokturne" }],
+  creator: "Nokturne",
   openGraph: {
     type: "website",
     locale: "fr_FR",
     url: "https://nocturne-fx.vercel.app",
-    siteName: "Nocturne FX",
-    title: "Nocturne — Effets spéciaux pour scènes & événements",
+    siteName: "Nokturne",
+    title: "Nokturne — Effets spéciaux pour scènes & événements",
     description:
       "Prestation, location et conception d'effets spéciaux scéniques pour vos shows.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nocturne — Effets spéciaux pour scènes & événements",
+    title: "Nokturne — Effets spéciaux pour scènes & événements",
     description:
       "Prestation, location et conception d'effets spéciaux scéniques pour vos shows.",
   },

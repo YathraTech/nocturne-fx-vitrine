@@ -11,8 +11,8 @@ import type {
 } from "./types";
 
 export const SITE = {
-  name: "Nocturne",
-  brand: "FYVE FX",
+  name: "Nokturne",
+  brand: "Nokturne",
   tagline: "Prestation · Location · Conception",
   hero: {
     keywords: ["FX", "Live", "Pyro"] as const,
@@ -21,9 +21,9 @@ export const SITE = {
   },
   description:
     "Prestataire, loueur et distributeur spécialisé en effets spéciaux scéniques et pyrotechniques. Basé au Sud de Paris, nous intervenons partout en France et à l'étranger.",
-  contactEmail: "contact@fyve-fx.fr",
+  contactEmail: "contact@nokturne.fr",
   yearFounded: 2020,
-  copyright: `© ${new Date().getFullYear()} ${"FYVE FX"} — FYVE PRODUCTION`,
+  copyright: `© ${new Date().getFullYear()} Nokturne — Tous droits réservés`,
 } as const;
 
 export const NAVIGATION: NavLink[] = [
@@ -164,11 +164,11 @@ export const PARTNERS: Partner[] = [
 ];
 
 export const ABOUT_PARAGRAPHS: string[] = [
-  "Fondée en 2020 d'une solide expérience dans la conception et l'exploitation d'événements, FYVE FX est l'aboutissement d'une réflexion de la société FYVE PRODUCTION pour offrir aux publics une expérience de l'événement inoubliable.",
+  "Fondée en 2020 d'une solide expérience dans la conception et l'exploitation d'événements, Nokturne est née d'une réflexion claire : offrir aux publics une expérience d'événement inoubliable.",
   "Au-delà d'emmener nos publics à travers des créations scéniques, nous souhaitons les embarquer dans une expérience unique et émotionnelle grâce aux SFX.",
   "De la location à l'expertise en passant par le conseil, nous sommes votre partenaire pour imaginer vos shows exceptionnels, tout en vous simplifiant l'accès aux SFX.",
   "N'hésitez pas à nous solliciter pour une prestation ou simplement de la location de matériel.",
-  "Pour toutes autres demandes techniques (audio, éclairage, vidéo…) merci de prendre contact directement avec FYVE PRODUCTION.",
+  "Pour toute demande technique (audio, éclairage, vidéo…), notre équipe vous oriente vers le bon partenaire de production.",
   "À très vite !",
 ];
 
