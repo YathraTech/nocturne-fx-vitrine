@@ -39,7 +39,7 @@ export function EffectCard({ effect, index }: EffectCardProps) {
       <div className="absolute inset-0 p-5 md:p-6 flex flex-col justify-end">
         <div className="flex items-end justify-between gap-4">
           <div>
-            <span className="block text-base md:text-lg font-bold tracking-wide uppercase text-white">
+            <span className="block text-lg md:text-xl font-bold tracking-tight uppercase text-white">
               {effect.name}
             </span>
             <span className="block text-[11px] md:text-xs text-white/70 mt-1 max-w-[24ch] line-clamp-2 opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-500">
