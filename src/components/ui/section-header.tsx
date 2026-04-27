@@ -48,7 +48,7 @@ export function SectionHeader({
         ) : null}
         <h2
           className={cn(
-            "text-lg md:text-xl font-bold tracking-tight uppercase",
+            "text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight uppercase",
             titleCls
           )}
         >
