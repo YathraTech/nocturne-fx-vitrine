@@ -22,7 +22,7 @@ export const SITE = {
   description:
     "Prestataire, loueur et distributeur spécialisé en effets spéciaux scéniques et pyrotechniques. Basé au Sud de Paris, nous intervenons partout en France et à l'étranger.",
   contactEmail: "contact@nokturne.fr",
-  yearFounded: 2020,
+  yearFounded: 2024,
   copyright: `© ${new Date().getFullYear()} Nokturne — Tous droits réservés`,
 } as const;
 
@@ -164,7 +164,7 @@ export const PARTNERS: Partner[] = [
 ];
 
 export const ABOUT_PARAGRAPHS: string[] = [
-  "Fondée en 2020 d'une solide expérience dans la conception et l'exploitation d'événements, Nokturne est née d'une réflexion claire : offrir aux publics une expérience d'événement inoubliable.",
+  "Fondée en 2024 sur une solide expérience dans la conception et l'exploitation d'événements, Nokturne est née d'une réflexion claire : offrir aux publics une expérience d'événement inoubliable.",
   "Au-delà d'emmener nos publics à travers des créations scéniques, nous souhaitons les embarquer dans une expérience unique et émotionnelle grâce aux SFX.",
   "De la location à l'expertise en passant par le conseil, nous sommes votre partenaire pour imaginer vos shows exceptionnels, tout en vous simplifiant l'accès aux SFX.",
   "N'hésitez pas à nous solliciter pour une prestation ou simplement de la location de matériel.",
@@ -172,7 +172,6 @@ export const ABOUT_PARAGRAPHS: string[] = [
   "À très vite !",
 ];
 
-export const ABOUT_SIGNATURE = "Lucas, Quentin & Yohan";
 
 export const SOCIALS: SocialLink[] = [
   { label: "Facebook", href: "https://facebook.com", icon: "facebook" },

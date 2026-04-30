@@ -2,12 +2,7 @@ import { Clock, FileText, ShieldCheck, type LucideIcon } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
 import { ContactForm } from "@/components/sections/contact-form";
-import {
-  ABOUT_PARAGRAPHS,
-  ABOUT_SIGNATURE,
-  FEATURES,
-  SITE,
-} from "@/lib/data";
+import { ABOUT_PARAGRAPHS, FEATURES, SITE } from "@/lib/data";
 import type { IconName } from "@/lib/types";
 
 const FEATURE_ICONS: Record<IconName, LucideIcon> = {
@@ -48,9 +43,6 @@ export function AboutContact() {
                   {ABOUT_PARAGRAPHS.map((p, i) => (
                     <p key={i}>{p}</p>
                   ))}
-                  <p className="font-medium text-foreground pt-3">
-                    {ABOUT_SIGNATURE}
-                  </p>
                 </div>
               </div>
             </div>
